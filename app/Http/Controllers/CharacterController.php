@@ -30,7 +30,7 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        //
+        return view('characters.create');
     }
 
     /**
@@ -41,7 +41,7 @@ class CharacterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
