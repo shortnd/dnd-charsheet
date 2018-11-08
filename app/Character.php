@@ -10,4 +10,8 @@ class Character extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function saving_throw()
+    {
+        return $this->hasOne('saving_throw');
+    }
 }

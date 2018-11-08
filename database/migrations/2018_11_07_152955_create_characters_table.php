@@ -73,6 +73,7 @@ class CreateCharactersTable extends Migration
             $table->integer('initiative_mod_def_mod')->nullable();
             $table->integer('initiative_mod_misc_mod')->nullable();
             // SAVING THROW
+            $table->unsignedInteger('saving_throw_id');
 
             $table->boolean('public')->default(false);
             $table->timestamps();
