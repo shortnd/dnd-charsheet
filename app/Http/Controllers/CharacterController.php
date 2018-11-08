@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class CharacterController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('auth')->except('index');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +19,8 @@ class CharacterController extends Controller
      */
     public function index()
     {
-        //
+        $characters = Character::all()->where('public');
+        dd($characters);
     }
 
     /**
